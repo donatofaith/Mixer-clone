@@ -3,6 +3,15 @@
 html, body{
     background: #253141;
     font-family: "monserrat" , sans-serif;
+    background-image: linear-gradient(
+        to bottom, rgba(37, 49, 65, 0),0%,
+        #253141 50%,
+        #253141 100%),
+     url("https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_400/ncom/software/switch/70010000024591/177a72a1fb18f3a5c143412ad1432aa6997d23ca1415f3d3fa58c1252a171b41");
+     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari17+ */     
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 header {
     display: flex;
@@ -29,6 +38,11 @@ header .left-menu .menu a {
     padding: 0 20px;
     text-transform: uppercase ;
     font-weight: 300;
+    transition: all 0.2s ease-in-out;
+ }
+ header .left-menu .menu a:hover {
+    color: rgba(255,255,255,1);
+   
  }
 header .right-menu {
     display: flex;
@@ -56,13 +70,13 @@ header .right-menu .Signin{
     width: 1200px;
     margin: 0 auto;
 }
-#featured{
-      padding: 50px 0;
-}
-#featured .title{
+.title{
     font-size: 1.8rem;
     color: white;
     margin-bottom:30px ;
+}
+#featured{
+      padding: 50px 0 50px;
 }
 #featured .Video-section{
     display: grid;
@@ -81,6 +95,7 @@ header .right-menu .Signin{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 #featured .Video-section .Video.center{
     width: 100%; ;
@@ -95,6 +110,9 @@ header .right-menu .Signin{
     background-size: cover;
     background-repeat: no-repeat;
     transform: scale(1.05);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center;
     border:2px solid  #00b4f0;
 }
 #featured .Video-section .Video:nth-child(1) .image, 
@@ -126,4 +144,69 @@ header .right-menu .Signin{
     height: 100%;
     padding: 10px;
     right: 0;
+}
+#featured .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+#featured .dots .Circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#featured .dots .Circles .circle {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background: white;
+}
+#featured .dots .Circles .circle-active {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
+#top-games{
+}
+#top-games .games{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+#top-games .games .game{
+    background: url("https://media.contentapi.ea.com/content/dam/apex-legends/common/articles/apex-legends-mobile-faq/common/apex-mobile-announce-art-3840x2160.jpg.adapt.crop16x9.575p.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:300px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.45);
+    box-shadow:0px 5px 5px 0px rgba(0,0,0,0.45);
+    overflow:hidden;
+    cursor: pointer;
+}
+#top-games .game .info {
+    background: #253041;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10%;
+    color: white;
+}
+#top-games .game:hover .info{
+    background: #313f55;
+}
+#top-games .game .info .gamename {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#top-games .game .info .views{
+    font-weight: 300;
+    color: #8c919d;
+    font-size: 0.9rem;
 }
